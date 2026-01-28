@@ -4,9 +4,11 @@
   <title>Soil Mate</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <div class="footer">
   AMAZON FUTURE ENGINEER
 </div>
+
 <body>
 
 <!-- APP BAR -->
@@ -21,7 +23,7 @@
   </div>
 </div>
 
-<!-- SCREEN 3 : MENU -->
+<!-- SCREEN 2 : MENU -->
 <div class="screen" id="menu">
   <button onclick="show('crop')">CROP SUGGESTIONS</button>
   <button onclick="show('health')">CROP HEALTH</button>
@@ -29,8 +31,9 @@
   <button onclick="show('expenses')">EXPENSES PER ACRE</button>
 </div>
 
-<!-- SCREEN 4 : CROP SUGGESTIONS -->
+<!-- SCREEN 3 : CROP SUGGESTIONS -->
 <div class="screen" id="crop">
+  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
   <h3>Crop Suggestions</h3>
   <input id="location" placeholder="Enter farm location">
   <input id="area" placeholder="Area of farm (acres)">
@@ -40,24 +43,27 @@
   <pre id="cropResult"></pre>
 </div>
 
-<!-- CROP HEALTH -->
+<!-- SCREEN 4 : CROP HEALTH -->
 <div class="screen" id="health">
+  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
   <h3>Crop Health</h3>
   <input type="file" id="cropImage" accept="image/*">
   <button onclick="getCropHealth()">GET SUGGESTIONS</button>
   <pre id="healthResult"></pre>
 </div>
 
-<!-- PROCESS OF CULTIVATION -->
+<!-- SCREEN 5 : PROCESS OF CULTIVATION -->
 <div class="screen" id="cultivation">
+  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
   <h3>Process of Cultivation</h3>
   <input id="cultCrop" placeholder="Selected crop">
   <button onclick="getCultivation()">Get the process of cultivation</button>
   <pre id="cultResult"></pre>
 </div>
 
-<!-- SELECTED CROP / EXPENSES -->
+<!-- SCREEN 6 : EXPENSES -->
 <div class="screen" id="expenses">
+  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
   <h3>Selected Crop</h3>
   <input id="expCrop" placeholder="Selected crop">
   <button onclick="getExpenses()">Get Expenses Per Acre</button>
