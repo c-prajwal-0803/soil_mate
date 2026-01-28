@@ -3,71 +3,85 @@
 <head>
   <title>Soil Mate</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<div class="footer">
-  AMAZON FUTURE ENGINEER
-</div>
 
 <body>
 
 <!-- APP BAR -->
-<div class="appbar" id="title">Soil Mate</div>
+<div class="appbar">🌱 Soil Mate</div>
 
 <!-- SCREEN 1 : HOME -->
 <div class="screen active" id="home">
-  <div class="center">
+  <div class="card center">
     <img src="SOILMATELOGO.png" class="logo" alt="Soil Mate Logo">
     <h1>Soil Mate</h1>
-    <button onclick="show('menu')">GET STARTED</button>
+    <p class="subtitle">Smart farming made simple</p>
+    <button class="primary" onclick="show('menu')">Get Started</button>
   </div>
 </div>
 
 <!-- SCREEN 2 : MENU -->
 <div class="screen" id="menu">
-  <button onclick="show('crop')">CROP SUGGESTIONS</button>
-  <button onclick="show('health')">CROP HEALTH</button>
-  <button onclick="show('cultivation')">THE PROCESS OF CULTIVATION</button>
-  <button onclick="show('expenses')">EXPENSES PER ACRE</button>
+  <div class="card">
+    <h2>Choose a Service</h2>
+    <button onclick="show('crop')">🌾 Crop Suggestions</button>
+    <button onclick="show('health')">🩺 Crop Health</button>
+    <button onclick="show('cultivation')">🚜 Cultivation Process</button>
+    <button onclick="show('expenses')">💰 Expenses Per Acre</button>
+  </div>
 </div>
 
 <!-- SCREEN 3 : CROP SUGGESTIONS -->
 <div class="screen" id="crop">
-  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
-  <h3>Crop Suggestions</h3>
-  <input id="location" placeholder="Enter farm location">
-  <input id="area" placeholder="Area of farm (acres)">
-  <input id="water" placeholder="Water availability">
-  <input type="file" id="soilFile">
-  <button onclick="getCropSuggestions()">GET CROP SUGGESTIONS</button>
-  <pre id="cropResult"></pre>
+  <div class="card">
+    <button class="back-btn" onclick="show('menu')">⬅ Back</button>
+    <h3>Crop Suggestions</h3>
+    <input id="location" placeholder="📍 Farm Location">
+    <input id="area" placeholder="📏 Area (acres)">
+    <input id="water" placeholder="💧 Water Availability">
+    <input type="file" id="soilFile">
+    <button class="primary" onclick="getCropSuggestions()">Get Suggestions</button>
+    <pre id="cropResult"></pre>
+  </div>
 </div>
 
 <!-- SCREEN 4 : CROP HEALTH -->
 <div class="screen" id="health">
-  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
-  <h3>Crop Health</h3>
-  <input type="file" id="cropImage" accept="image/*">
-  <button onclick="getCropHealth()">GET SUGGESTIONS</button>
-  <pre id="healthResult"></pre>
+  <div class="card">
+    <button class="back-btn" onclick="show('menu')">⬅ Back</button>
+    <h3>Crop Health Analysis</h3>
+    <input type="file" id="cropImage" accept="image/*">
+    <button class="primary" onclick="getCropHealth()">Analyze Crop</button>
+    <pre id="healthResult"></pre>
+  </div>
 </div>
 
-<!-- SCREEN 5 : PROCESS OF CULTIVATION -->
+<!-- SCREEN 5 : CULTIVATION -->
 <div class="screen" id="cultivation">
-  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
-  <h3>Process of Cultivation</h3>
-  <input id="cultCrop" placeholder="Selected crop">
-  <button onclick="getCultivation()">Get the process of cultivation</button>
-  <pre id="cultResult"></pre>
+  <div class="card">
+    <button class="back-btn" onclick="show('menu')">⬅ Back</button>
+    <h3>Process of Cultivation</h3>
+    <input id="cultCrop" placeholder="🌱 Crop Name">
+    <button class="primary" onclick="getCultivation()">Get Process</button>
+    <pre id="cultResult"></pre>
+  </div>
 </div>
 
 <!-- SCREEN 6 : EXPENSES -->
 <div class="screen" id="expenses">
-  <button class="back-btn" onclick="show('menu')">⬅ Back to Menu</button> <!-- NEW -->
-  <h3>Selected Crop</h3>
-  <input id="expCrop" placeholder="Selected crop">
-  <button onclick="getExpenses()">Get Expenses Per Acre</button>
-  <pre id="expResult"></pre>
+  <div class="card">
+    <button class="back-btn" onclick="show('menu')">⬅ Back</button>
+    <h3>Expenses Per Acre</h3>
+    <input id="expCrop" placeholder="🌾 Crop Name">
+    <button class="primary" onclick="getExpenses()">Calculate Expenses</button>
+    <pre id="expResult"></pre>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  AMAZON FUTURE ENGINEER
 </div>
 
 <script src="script.js"></script>
