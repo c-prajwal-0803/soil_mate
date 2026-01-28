@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soil Mate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<div class="footer">
+  AMAZON FUTURE ENGINEER
+</div>
+<body>
+
+<!-- APP BAR -->
+<div class="appbar" id="title">Soil Mate</div>
+
+<!-- SCREEN 1 : HOME -->
+<div class="screen active" id="home">
+  <div class="center">
+    <img src="SOILMATELOGO.png" class="logo" alt="Soil Mate Logo">
+    <h1>Soil Mate</h1>
+    <button onclick="show('menu')">GET STARTED</button>
+  </div>
+</div>
+
+<!-- SCREEN 3 : MENU -->
+<div class="screen" id="menu">
+  <button onclick="show('crop')">CROP SUGGESTIONS</button>
+  <button onclick="show('health')">CROP HEALTH</button>
+  <button onclick="show('cultivation')">THE PROCESS OF CULTIVATION</button>
+  <button onclick="show('expenses')">EXPENSES PER ACRE</button>
+</div>
+
+<!-- SCREEN 4 : CROP SUGGESTIONS -->
+<div class="screen" id="crop">
+  <h3>Crop Suggestions</h3>
+  <input id="location" placeholder="Enter farm location">
+  <input id="area" placeholder="Area of farm (acres)">
+  <input id="water" placeholder="Water availability">
+  <input type="file" id="soilFile">
+  <button onclick="getCropSuggestions()">GET CROP SUGGESTIONS</button>
+  <pre id="cropResult"></pre>
+</div>
+
+<!-- CROP HEALTH -->
+<div class="screen" id="health">
+  <h3>Crop Health</h3>
+  <input type="file" id="cropImage" accept="image/*">
+  <button onclick="getCropHealth()">GET SUGGESTIONS</button>
+  <pre id="healthResult"></pre>
+</div>
+
+<!-- PROCESS OF CULTIVATION -->
+<div class="screen" id="cultivation">
+  <h3>Process of Cultivation</h3>
+  <input id="cultCrop" placeholder="Selected crop">
+  <button onclick="getCultivation()">Get the process of cultivation</button>
+  <pre id="cultResult"></pre>
+</div>
+
+<!-- SELECTED CROP / EXPENSES -->
+<div class="screen" id="expenses">
+  <h3>Selected Crop</h3>
+  <input id="expCrop" placeholder="Selected crop">
+  <button onclick="getExpenses()">Get Expenses Per Acre</button>
+  <pre id="expResult"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
