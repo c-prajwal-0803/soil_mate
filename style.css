@@ -1,81 +1,132 @@
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  font-weight: bold;
-  letter-spacing: 1px;
-  z-index: 1000;
-  user-select: none;   /* prevents text selection */
+/* RESET */
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+  min-height: 100vh;
 }
 
+/* APP BAR */
 .appbar {
-  background: #3f51b5;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
   color: white;
-  padding: 15px;
+  padding: 16px;
   font-size: 22px;
-  text-align: left;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* SCREEN TRANSITIONS */
 .screen {
   display: none;
   padding: 20px;
+  animation: fade 0.4s ease;
 }
 
 .screen.active {
   display: block;
 }
 
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CARD */
+.card {
+  background: white;
+  max-width: 420px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* CENTER */
 .center {
   text-align: center;
-  margin-top: 80px;
 }
 
 .logo {
-  width: 140px;
+  width: 120px;
+  margin-bottom: 10px;
 }
 
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* BUTTONS */
 button {
   width: 100%;
   padding: 14px;
-  margin: 10px 0;
+  margin-top: 12px;
   border: none;
-  background: #ddd;
+  border-radius: 8px;
   font-size: 16px;
+  cursor: pointer;
+  background: #e0e0e0;
+  transition: 0.3s;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+button:hover {
+  background: #c8e6c9;
 }
 
-pre {
-  border: 1px solid #000;
-  padding: 10px;
-  background: #eee;
-  white-space: pre-wrap;
-}
-
-.back-btn {
-  background: #3f51b5;
+/* PRIMARY BUTTON */
+.primary {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
   color: white;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 4px;
+  font-weight: bold;
+}
+
+.primary:hover {
+  opacity: 0.9;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  background: #eeeeee;
+  color: #333;
   font-size: 14px;
 }
 
-.back-btn:hover {
-  background: #303f9f;
+/* RESULTS */
+pre {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f1f8e9;
+  border-left: 5px solid #66bb6a;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-size: 14px;
 }
