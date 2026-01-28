@@ -66,3 +66,16 @@ pre {
   background: #eee;
   white-space: pre-wrap;
 }
+
+.back-btn {
+  background: #3f51b5;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background: #303f9f;
+}
